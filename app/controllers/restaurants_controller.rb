@@ -11,8 +11,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found_response
   end
 
   def destroy
-   restaurant =Restaurant.find_restaurant.destroy
-   restaurant.destroy
+   find_restaurant.destroy
     head :no_content
   end
 
